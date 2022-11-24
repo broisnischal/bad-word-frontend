@@ -5,7 +5,7 @@ import TagsInput from "./component/Tags";
 import { useState } from "react";
 import axios from "axios";
 
-export const API = "http://localhost:8000/api/v1/words/";
+export const API = process.env.API || "http://localhost:8000/api/v1/words/";
 
 function App() {
   const [words, setWords] = useState(["M**i"]);
