@@ -1,0 +1,46 @@
+.App {
+  background: rgb(27, 27, 27);
+  height: 95vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .form {
+    width: min(90%, 550px);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    .bottom {
+      input {
+        outline: none;
+        background: transparent;
+        color: white;
+        border: none;
+        border-bottom: 1px solid #eee;
+        margin-right: 10px;
+        padding: 0px 10px;
+      }
+      .send {
+        margin-top: 10px;
+        padding: 3px 15px;
+        cursor: pointer;
+        background: transparent;
+        color: #eee;
+        outline: none;
+        border: 1px solid white;
+        &:hover {
+          background: white;
+          color: crimson;
+        }
+      }
+    }
+  }
+}
+p {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
