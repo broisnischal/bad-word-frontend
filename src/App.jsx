@@ -5,6 +5,8 @@ import TagsInput from "./component/Tags";
 import { useState } from "react";
 import axios from "axios";
 
+export const API = "http://localhost:8000/api/v1/words/";
+
 function App() {
   const [words, setWords] = useState(["M**i"]);
   const [name, setName] = useState("Anonymous");
@@ -16,7 +18,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/words/", {
+      const response = await axios.post(API, {
         name,
         words,
       });
