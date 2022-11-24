@@ -5,11 +5,12 @@ import TagsInput from "./component/Tags";
 import { useState } from "react";
 import axios from "axios";
 
-export const API = process.env.API || "http://localhost:8000/api/v1/words/";
+export const API = "https://mulaa.onrender.com/api/v1/words";
 
 function App() {
   const [words, setWords] = useState(["M**i"]);
   const [name, setName] = useState("Anonymous");
+  const [loading, setLoading] = useState(false);
 
   const selected = (tags) => {
     setWords(tags);
@@ -17,6 +18,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await axios.post(API, {
         name,
@@ -24,9 +26,11 @@ function App() {
       });
       toast.success(response.data.message);
       setWords([]);
+      setLoading(false);
     } catch (err) {
       console.log(err);
       toast.error(err.response.data.message);
+      setLoading(false);
     }
   };
 
@@ -45,15 +49,24 @@ function App() {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Name"
                 />
-                <button onClick={handleSubmit} className="send" type="submit">
-                  Submit
-                </button>
+                {loading ? (
+                  <></>
+                ) : (
+                  <button onClick={handleSubmit} className="send" type="submit">
+                    Submit
+                  </button>
+                )}
               </div>
             </>
           ) : null}
         </div>
       </div>
-      <p>Powered by &copy; neeswebservices</p>
+      <p>
+        Powered by &copy;{" "}
+        <a href="https://github.com/neeswebservices" target={"_blank"}>
+          neeswebservices
+        </a>
+      </p>
     </>
   );
 }
