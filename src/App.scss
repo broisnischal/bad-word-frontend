@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   .form {
     width: min(90%, 550px);
     display: flex;
@@ -35,6 +36,16 @@
           background: white;
           color: crimson;
         }
+      }
+      .buttonload {
+        border: none; /* Remove borders */
+        margin-top: 10px;
+        padding: 3px 15px;
+        cursor: pointer;
+        background: transparent;
+        color: #eee;
+        outline: none;
+        border: 1px solid white;
       }
     }
   }
