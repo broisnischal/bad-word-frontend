@@ -13,7 +13,7 @@ const Docs = ({ open, setOpen }) => {
         What is <span className="underline">Mulaa</span> ?
       </h2>
       <p className="--color-red">
-        Mulaa is a open source contribution for all the nepali peoples which
+        Mulaa is a open source contribution for all the nepali peoples where
         they can contribute slang, vulgar and rough word in the community for
         API. Sounds funny right ?🤣😜
       </p>
