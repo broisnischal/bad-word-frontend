@@ -78,7 +78,7 @@ function App() {
         </div>
         {open && <Docs setOpen={setOpen} />}
       </div>
-      <p>Powered by &copy; nws | Nepal</p>
+      <p>Powered by &copy; Mulaa | Nepal</p>
     </>
   );
 }
