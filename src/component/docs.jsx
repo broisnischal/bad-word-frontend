@@ -15,7 +15,7 @@ const Docs = ({ open, setOpen }) => {
       <p className="--color-red">
         Mulaa is a open source contribution for all the nepali peoples which
         they can contribute slang, vulgar and rough word in the community for
-        API.
+        API. Sounds funny right ?🤣😜
       </p>
       <p className="--color-green">
         If you want to filter your input via the slang and vulgar word we are
